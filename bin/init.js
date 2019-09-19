@@ -2,7 +2,7 @@ const fs = require('fs');
 const pwd = process.cwd();
 const {copy} = require('./util.js')
 
-const src = pwd+'/node_modules/webpack-ft';
+const src = pwd+'/node_modules/webpack-init-simple';
 const dist = pwd;
 
 //项目模版

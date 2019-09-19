@@ -1,6 +1,6 @@
 {
-  "name": "webpack-ft",
-  "version": "1.0.9",
+  "name": "webpack-init-simple",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 const child_process = require('child_process');
 const execSync = child_process.execSync;
- execSync(`webpack --config ./node_modules/webpack-ft/webpack.config.pro.js --mode production`,function(error,stdout,stderr){
+ execSync(`webpack --config ./node_modules/webpack-init-simple/webpack.config.pro.js --mode production`,function(error,stdout,stderr){
     if (error) {
       console.error(`执行的错误: ${error}`);
       return;
