@@ -3,15 +3,15 @@ const path = require('path');
 const webpack =require('webpack') ;
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const baseUrl=path.resolve(__dirname);
 
+const pwd = process.cwd();
 module.exports={
     entry: {
-        app:'./src/index.js'
+        app:pwd+'/src/index.js'
     },
     output: {
         filename: '[name]_main_[hash].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(pwd, 'dist'),
         chunkFilename: '[name]_chunk_[chunkhash].js',
     },
     module: {
@@ -45,14 +45,23 @@ module.exports={
                 'file-loader'
             ]
             },
+            {
+                test: /\.js$/,
+                use: [{
+                    loader:'babel-loader',
+                    options:{
+
+                    }
+                }],
+            },
             // 第三方的 soucemap 加载
-      {
-        test: /\.js$/,
-        use: ["source-map-loader"],
-        enforce: "pre"
-      },
+            // {
+            //     test: /\.js$/,
+            //     use: ["source-map-loader"],
+            //     enforce: "pre"
+            // },
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-            // { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
 
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             // { enforce: "pre", test: /\.js$/, use:["source-map-loader"]  },
@@ -62,8 +71,8 @@ module.exports={
     plugins:[
         new ExtractTextPlugin('[name].style.[hash].css'),
         new htmlWebpackPlugin({
-            filename: path.join(baseUrl,"dist",'index.html'),
-            template: path.join(baseUrl,'index.html'),
+            filename: path.join(pwd,"dist",'index.html'),
+            template: path.join(pwd,'src/index.html'),
             inject: 'body',
             chunks:['app']
         }),//html生成

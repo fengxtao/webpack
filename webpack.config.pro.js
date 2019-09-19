@@ -1,10 +1,17 @@
 const path = require('path');
-const webpack =require('webpack') ;
+const fs = require('fs')
 const clearWebpackPlugin = require('clean-webpack-plugin')
 const merge = require('webpack-merge')
-
-const baseUrl=path.resolve(__dirname);
+const pwd = process.cwd();
 const baseConfig=require('./webpack.base');
+
+//config 扩展
+let extendConfig={};
+let extendConfigPath=path.join(pwd,process.env.extendConfig||'webpack.pro.extendConfig.js');
+if( fs.existsSync(extendConfigPath) ){
+  extendConfig= require(extendConfigPath);
+}
+
 let proConfig={
 	//  optimization:{
 	// 	splitChunks:{
@@ -33,10 +40,7 @@ let proConfig={
 	// ,	
 	mode:'production',
 	plugins: [
-		new clearWebpackPlugin(['dist'],{root: baseUrl}),
-		new webpack.DefinePlugin({
-            'a2': '__DEV__2'
-        })
+		new clearWebpackPlugin(['dist'],{root: pwd}),
 	],
 };
-module.exports = merge(baseConfig,proConfig);
+module.exports = merge(baseConfig,proConfig,extendConfig);

@@ -1,23 +1,22 @@
 const path = require('path');
+const fs = require('fs')
 const webpack =require('webpack') ;
-var htmlWebpackPlugin = require('html-webpack-plugin')
-var baseUrl=path.resolve(__dirname);
-
 const merge = require('webpack-merge')
 const baseConfig=require('./webpack.base');
+const pwd = process.cwd();
 
-const net_init=require('./proxy/net_init')
-
-
+//config 扩展
+let extendConfig={};
+let extendConfigPath=path.join(pwd,process.env.extendConfig||'webpack.dev.extendConfig.js');
+if( fs.existsSync(extendConfigPath) ){
+  extendConfig= require(extendConfigPath);
+}
 
 let devConfig={
   mode:'development',
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),//代码模块热替换
-  //   new webpack.DefinePlugin({
-  //     a: '__DEV__2'
-  // })
   ],
   devtool: 'inline-source-map',//开发助手
   // devServer: {
@@ -36,13 +35,11 @@ let devConfig={
   //         // net_init(req,res);
   //         setTimeout(function(){
   //           res.end(s)
-  //         },100)
-          
+  //         },100)   
   //       }
   //     }
   //   }
-    
   // },
 }
 
-module.exports = merge(baseConfig,devConfig)
+module.exports = merge(baseConfig,devConfig,extendConfig)
