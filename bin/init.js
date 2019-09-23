@@ -34,5 +34,5 @@ var writeable=fs.createWriteStream(dist+'/package.json',{
     mode: 0o666,
     autoClose: true
 });
-writeable.write( JSON.stringify(package) );
+writeable.write( JSON.stringify(package,null,4) );
 

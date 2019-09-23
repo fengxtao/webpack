@@ -1,12 +1,13 @@
 {
   "name": "webpack-init-simple",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.pro.js --mode production",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js --mode development",
-    "start": "node scripts/start"
+    "start": "node scripts/start",
+    "pub":"npm publish --registry https://registry.npmjs.org"
   },
   "author": "",
   "license": "ISC",
