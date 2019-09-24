@@ -29,6 +29,8 @@ const options = {
     hot: true,
     inline: true,
     disableHostCheck: true,
+    open:true,
+    host:HOST
 };
 
 choosePort(HOST,DEFAULT_PORT).then((port)=>{
@@ -44,7 +46,7 @@ choosePort(HOST,DEFAULT_PORT).then((port)=>{
         clearConsole();
       }
       console.log(chalk.cyan('Starting the development server...\n'));
-      openBrowser('http://'+HOST+':'+port);
+      // openBrowser('http://'+HOST+':'+port);
     });
 })
 

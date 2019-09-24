@@ -3,7 +3,7 @@
 // import fengtao =require('./util/tools.js') 
 import React from 'react' ;
 import ReactDOM from 'react-dom'
-import './util/tools.js'
+// import './util/tools.js'
 import  './style.scss'
 
 
@@ -21,10 +21,10 @@ import  './style.scss'
 //     <Hello compiler="TypeScript" framework="React" />
 //   , document.getElementById('app')
 // );
-alert(a)
+
 
 
 ReactDOM.render(
-    <div>123</div> 
+    <div>1234567</div> 
   , document.getElementById('app')
 );

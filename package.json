@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.pro.js --mode production",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js --mode development",
     "start": "node scripts/start",
-    "pub":"npm publish --registry https://registry.npmjs.org"
+    "pub": "npm publish --registry https://registry.npmjs.org"
   },
   "author": "",
   "license": "ISC",
