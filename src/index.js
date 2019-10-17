@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom'
 // import './util/tools.js'
 import  './style.scss'
 
-
+import {Alert,Button,Affix,Checkbox} from 'antd'
+import {fengtao} from './util/tools.js'
 // interface HelloProps { compiler: string; framework: string; }
 
 // // 'HelloProps' describes the shape of props.
@@ -23,8 +24,15 @@ import  './style.scss'
 // );
 
 
-
+fengtao("taotao")
+// console.log("taotao2")
 ReactDOM.render(
-    <div>1234567</div> 
+    <div>
+      {/* <Alert message="aaa"/> */}
+      <Button> aaa</Button>
+      {/* <div>222</div> */}
+      {/* <Affix style={{ position: 'absolute'}}>...</Affix>
+      <Checkbox>Checkbox</Checkbox> */}
+    </div> 
   , document.getElementById('app')
 );

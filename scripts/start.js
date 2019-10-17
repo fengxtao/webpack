@@ -1,7 +1,7 @@
 const webpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
 const path = require('path');
-const config = require('../webpack.config.dev.js');
+const config = require('../config/webpack.config.dev.js');
 const choosePort=require('./chose')
 const isInteractive = process.stdout.isTTY;
 const clearConsole=require('./clearConsole')

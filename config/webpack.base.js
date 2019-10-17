@@ -3,7 +3,7 @@ const path = require('path');
 const webpack =require('webpack') ;
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const babelrc = require('./babelrc.js');
 const pwd = process.cwd();
 module.exports={
     entry: {
@@ -47,25 +47,17 @@ module.exports={
             },
             {
                 test: /\.js$/,
+                exclude: /node_modules/,
                 use: [{
                     loader:'babel-loader',
-                    options:{
-
-                    }
+                    options:babelrc
                 }],
             },
-            // 第三方的 soucemap 加载
-            // {
-            //     test: /\.js$/,
-            //     use: ["source-map-loader"],
-            //     enforce: "pre"
-            // },
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
 
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             // { enforce: "pre", test: /\.js$/, use:["source-map-loader"]  },
-             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     },
     plugins:[

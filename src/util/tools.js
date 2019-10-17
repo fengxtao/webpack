@@ -1,8 +1,8 @@
-const fengtao=function(){
-    alert('fengtao')
+const fengtao=function(a){
+    alert(a)
 }
 const fengtao2=function(){
     alert('fengtao2')
 }
 alert('taotao')
-export default {fengtao,fengtao2}
+export {fengtao,fengtao2}

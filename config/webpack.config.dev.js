@@ -15,8 +15,6 @@ if( fs.existsSync(extendConfigPath) ){
 let devConfig={
   mode:'development',
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),//代码模块热替换
   ],
   devtool: 'inline-source-map',//开发助手
   // devServer: {

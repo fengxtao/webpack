@@ -40,7 +40,7 @@ let proConfig={
 	// ,	
 	mode:'production',
 	plugins: [
-		new clearWebpackPlugin(['dist'],{root: pwd}),
+		new clearWebpackPlugin(['dist'],{root: pwd})
 	],
 };
 module.exports = merge(baseConfig,proConfig,extendConfig);

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const pwd = process.cwd();
 const {copy} = require('./util.js')
@@ -6,13 +8,10 @@ const src = pwd+'/node_modules/webpack-init-simple';
 const dist = pwd;
 
 //项目模版
-copy(src+'/src',dist+'/src' );
-copy(src+'/.babelrc',dist+'/.babelrc' );
-copy(src+'/webpack.base.js',dist+'/webpack.base.js' );
-copy(src+'/webpack.config.dev.js',dist+'/webpack.config.dev.js' );
-copy(src+'/webpack.config.pro.js',dist+'/webpack.config.pro.js' );
+copy(src+'/config',dist+'/config' );
 copy(src+'/tsconfig.json',dist+'/tsconfig.json' );
-copy(src+'/scripts',dist+'/scripts' );
+copy(src+'/src',dist+'/src' );
+// copy(src+'/scripts',dist+'/scripts' );
 
 //package.json 修改
 let package_demo = JSON.parse( fs.readFileSync(src+'/package.json') );
