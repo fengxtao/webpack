@@ -1,38 +1,48 @@
-// import React = require('react') ;
-// import ReactDOM = require ('react-dom')
-// import fengtao =require('./util/tools.js') 
-import React from 'react' ;
+import React, { Component } from 'react' ;
 import ReactDOM from 'react-dom'
-// import './util/tools.js'
+
+//mutants fx使用
+import App from 'mutants-microfx';
 import  './style.scss'
+import {
+  registerRoutes,
+  registerStores,
+  history
+} from 'mutants-microfx';
 
-import {Alert,Button,Affix,Checkbox} from 'antd'
-import {fengtao} from './util/tools.js'
-// interface HelloProps { compiler: string; framework: string; }
+registerRoutes( [{
+  path:'/a',
+  component:()=><div>aaa</div>
+}]);
+registerRoutes( [{
+  path:'/b',
+  component:()=><div>bbb</div>
+}]);
 
-// // 'HelloProps' describes the shape of props.
-// // State is never set so we use the '{}' type.
-// class Hello extends React.Component<HelloProps, {}> {
-//     render() {
-//         return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
-//     }
-// }
+ReactDOM.render(<App />, document.getElementById('app'));
 
-// ReactDOM.render(
-//     <Hello compiler="TypeScript" framework="React" />
-//   , document.getElementById('app')
-// );
+setTimeout(()=>{
+  history.push('a')
+  setTimeout(()=>{
+    history.push('b')
+  },2000)
+},2000)
 
 
-fengtao("taotao")
-// console.log("taotao2")
-ReactDOM.render(
-    <div>
-      {/* <Alert message="aaa"/> */}
-      <Button> aaa</Button>
-      {/* <div>222</div> */}
-      {/* <Affix style={{ position: 'absolute'}}>...</Affix>
-      <Checkbox>Checkbox</Checkbox> */}
-    </div> 
-  , document.getElementById('app')
-);
+
+
+
+ /**
+  * 自定义  promise 使用  
+  * @step1  解开 index.html  >  <script> window.Promise = undefined;</script>
+  * @step2 解开 config/webpack.base.js  >  new promisePlugin()
+  * @step3 解开 下边测试代码
+  */
+// new Promise((resolve)=>{
+//   console.log('start')
+//   setTimeout(() => {
+//     resolve(23432432432)
+//   }, 1000);
+// }).then((data)=>{
+//   console.log('then',data)
+// },()=>{})

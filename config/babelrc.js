@@ -2,13 +2,13 @@ module.exports = {
     "presets": [
       [
         "@babel/preset-env", {
-          // "modules": true,
+          "modules": false,
           "targets": {
             "browsers": ["last 2 Chrome versions", "IE >= 9"]
-          }
+          },
+          "useBuiltIns":"usage"
         }
       ],
-      // "module:react",
       "@babel/react"
     ],
     "plugins":[

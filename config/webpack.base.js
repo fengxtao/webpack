@@ -3,12 +3,13 @@ const path = require('path');
 const webpack =require('webpack') ;
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const promisePlugin = require('../src/util/plugin');
 const babelrc = require('./babelrc.js');
 const pwd = process.cwd();
+console.log(pwd,'pwd')
 module.exports={
-    entry: {
-        app:pwd+'/src/index.js'
-    },
+    entry: [ pwd+'/src/index.js'],
+    // target:'web',
     output: {
         filename: '[name]_main_[hash].js',
         path: path.join(pwd, 'dist'),
@@ -66,11 +67,12 @@ module.exports={
             filename: path.join(pwd,"dist",'index.html'),
             template: path.join(pwd,'src/index.html'),
             inject: 'body',
-            chunks:['app']
+            chunks:['main']
         }),//html生成
         new webpack.DefinePlugin({
             'a': JSON.stringify('__DEV__')
-        })
+        }),
+        // new promisePlugin()
     ],
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
