@@ -6,7 +6,7 @@ module.exports = {
           "targets": {
             "browsers": ["last 2 Chrome versions", "IE >= 9"]
           },
-          "useBuiltIns":"usage"
+          // "useBuiltIns":"usage"
         }
       ],
       "@babel/react"

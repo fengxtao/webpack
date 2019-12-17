@@ -17,7 +17,7 @@ module.exports =function choosePort(host, defaultPort) {
               ? `Admin permissions are required to run a server on a port below 1024.`
               : `Something is already running on port ${defaultPort}.`;
           if (isInteractive) {
-            clearConsole();
+            // clearConsole();
             const existingProcess = getProcessForPort(defaultPort);
             const question = {
               type: 'confirm',
