@@ -11,7 +11,7 @@ const dist = pwd;
 copy(src+'/config',dist+'/config' );
 copy(src+'/tsconfig.json',dist+'/tsconfig.json' );
 copy(src+'/src',dist+'/src' );
-// copy(src+'/scripts',dist+'/scripts' );
+copy(src+'/scripts',dist+'/scripts' );
 
 //package.json 修改
 let package_demo = JSON.parse( fs.readFileSync(src+'/package.json') );
