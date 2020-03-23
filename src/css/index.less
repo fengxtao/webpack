@@ -7,3 +7,11 @@
     vertical-align: middle;
     display: table-cell;
 }
+
+//去掉滚动轴
+.scrollnone{
+    &::-webkit-scrollbar{//chrome
+        display: none;
+    }
+    scrollbar-width: none;//firefox
+}
