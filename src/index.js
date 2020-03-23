@@ -1,6 +1,6 @@
 import React, { Component } from 'react' ;
 import ReactDOM from 'react-dom'
-// import  './style.scss'
+// import  './css/theme/style.scss'
 
 //mutants fx使用
 // import App from 'mutants-microfx';
