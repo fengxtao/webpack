@@ -11,10 +11,6 @@ import ReactDOM from 'react-dom'
 // } from 'mutants-microfx';
 
 
-const css = require('./style.less')
-console.log('css===',css); // {String}
-// window.css=css
-
 // registerRoutes( [{
 //   path:'/',
 //   component:()=><div>aaa</div>
