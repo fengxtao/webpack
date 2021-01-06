@@ -3,7 +3,6 @@ const path = require('path');
 const webpack =require('webpack') ;
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const promisePlugin = require('../src/plugin/plugin');
 const babelrc = require('./babelrc.js');
 const pwd = process.cwd();
 console.log(pwd,'pwd')
@@ -72,7 +71,6 @@ module.exports={
         new webpack.DefinePlugin({
             'a': JSON.stringify('__DEV__')
         }),
-        new promisePlugin()
     ],
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.

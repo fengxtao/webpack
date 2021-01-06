@@ -1,1 +1,56 @@
-/Users/fengtao/Documents/个人项目/webpack 2 pwd
+/Users/fengtao/Documents/个人项目/webpack-simple pwd
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://localhost:8080/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/fengtao/Documents/个人项目/webpack-simple
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[34mℹ[39m [90m｢wdm｣[39m: Hash: 9e658673960a078eff0d
+Version: webpack 4.44.2
+Time: 2481ms
+Built at: 2021-01-06 14:13:28
+                            Asset       Size  Chunks                         Chunk Names
+                       index.html  425 bytes          [emitted]              
+main_main_9e658673960a078eff0d.js   3.24 MiB    main  [emitted] [immutable]  main
+Entrypoint main = main_main_9e658673960a078eff0d.js
+[1] multi ./src/plugin/promiseDomyself.js ./src/plugin/promiseDomyself.js (webpack)-dev-server/client?http://localhost:8080 ./src/index.js 64 bytes {main} [built]
+    factory:0ms building:0ms dependencies:612ms = 612ms
+[./node_modules/ansi-html/index.js] 4.16 KiB {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> [./node_modules/webpack-dev-server/client/overlay.js] 1449ms -> factory:381ms building:27ms = 3819ms
+[./node_modules/react-dom/index.js] 1.33 KiB {main} [built]
+    [0] 1ms -> [./src/index.js] 1443ms -> factory:244ms building:9ms = 1697ms
+[./node_modules/react/index.js] 190 bytes {main} [built]
+    [0] 1ms -> [./src/index.js] 1443ms -> factory:244ms building:9ms = 1697ms
+[./node_modules/strip-ansi/index.js] 161 bytes {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] (webpack)-dev-server/client?http://localhost:8080 4.29 KiB {main} [built]
+    [1] 0ms -> factory:612ms building:1350ms = 1962ms
+[./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.51 KiB {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.91 KiB {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.59 KiB {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack-dev-server/client/utils/sendMessage.js] (webpack)-dev-server/client/utils/sendMessage.js 402 bytes {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./node_modules/webpack/hot sync ^\.\/log$] (webpack)/hot sync nonrecursive ^\.\/log$ 170 bytes {main} [built]
+    [1] 0ms -> [./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] 1962ms -> factory:1415ms building:34ms dependencies:171ms = 3582ms
+[./src/index.js] 992 bytes {main} [built]
+    [0] 1ms -> factory:612ms building:831ms = 1444ms
+[./src/plugin/promiseDomyself.js] 3.56 KiB {main} [built]
+    [1] 0ms -> factory:612ms building:1350ms = 1962ms
+    + 32 hidden modules
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 562 bytes {0} [built]
+        factory:1298ms building:174ms = 1472ms
+    [./node_modules/lodash/lodash.js] 530 KiB {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 1472ms -> factory:19ms building:199ms = 1690ms
+    [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 1472ms -> [./node_modules/lodash/lodash.js] 218ms -> factory:6ms building:9ms = 1705ms
+    [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+        [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 1472ms -> [./node_modules/lodash/lodash.js] 218ms -> factory:6ms building:9ms = 1705ms
+[34mℹ[39m [90m｢wdm｣[39m: Compiled successfully.
